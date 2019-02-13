@@ -20,5 +20,10 @@
   <li><code>browser-sync</code></li>
   <li><code>gulp-sourcemaps</code></li>
   <li><code>gulp-autoprefixer</code></li>
-  <li><code>gulp</code></li>
+  <li><code>gulp-sass</code></li>
+    <li><code>gulp-concat</code></li>
+    <li><code>gulp-imagemin</code></li>
+    <li><code>gulp-changed</code></li>
+    <li><code>uglify</code></li>
+    <li><code>gulp-line-ending-corrector</code></li>
 </ol>
