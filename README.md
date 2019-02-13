@@ -1,5 +1,5 @@
 # gulp4
-<h2>Prerequisites</h2>
+<h2>Pre Required</h2>
 <ul>
   <li>Node.js + npm</li>
   <li>Gulp installed globally: npm install gulp --global</li>
