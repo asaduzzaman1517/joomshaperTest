@@ -1,4 +1,5 @@
 var gulp = require("gulp"),
+  babel = require("gulp-babel"),
   autoprefixer = require("gulp-autoprefixer"),
   browserSync = require("browser-sync").create(),
   reload = browserSync.reload,
@@ -69,9 +70,16 @@ function style() {
 function javascript() {
   return gulp
     .src(jsSrc)
+    .pipe(sourcemaps.init())
+    .pipe(
+      babel({
+        presets: ["@babel/preset-env"]
+      })
+    )
     .pipe(concat("bundle.js"))
     .pipe(uglify())
     .pipe(lineec())
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(jsDist));
 }
 
