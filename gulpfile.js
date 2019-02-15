@@ -22,7 +22,12 @@ var styleDist = "dist/css/";
 var styleWatch = "src/sass/**/*.scss";
 
 //Js
-var jsSrc = ["node_modules/jquery/dist/jquery.min.js", "src/js/**/*.js"];
+var jsSrc = [
+  "node_modules/jquery/dist/jquery.js",
+  "node_modules/popper.js/dist/popper.js",
+  "node_modules/bootstrap/dist/js/bootstrap.js",
+  "src/js/**/*.js"
+];
 var jsDist = "dist/js/";
 
 //Image
@@ -73,7 +78,7 @@ function javascript() {
     .pipe(sourcemaps.init())
     .pipe(
       babel({
-        presets: ["@babel/preset-env"]
+        presets: ["@babel/env"]
       })
     )
     .pipe(concat("bundle.js"))
