@@ -39,7 +39,8 @@ function watch() {
   browserSync.init({
     server: {
       baseDir: "dist/"
-    }
+    },
+    notify: false
   });
   gulp.watch(htmlSrc, html);
   gulp.watch(styleWatch, style);
@@ -97,7 +98,10 @@ function imgmin() {
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
         imagemin.jpegtran({ progressive: true }),
-        imagemin.optipng({ optimizationLevel: 5 })
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [{ removeViewBox: true }, { cleanupIDs: false }]
+        })
       ])
     )
     .pipe(gulp.dest(imgDist));
