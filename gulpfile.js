@@ -38,7 +38,7 @@ var imgDist = "dist/img/";
 function watch() {
   browserSync.init({
     server: {
-      baseDir: "dist/"
+      baseDir: "./dist/"
     },
     notify: false
   });
@@ -48,7 +48,7 @@ function watch() {
   gulp.watch(imgSrc, imgmin);
   gulp
     .watch([htmlWatch, jsDist + "bundle.js", styleDist + "style.css"])
-    .on("change", browserSync.reload);
+    .on("change", reload);
 }
 
 //Html
@@ -67,7 +67,7 @@ function style() {
       }).on("error", sass.logError)
     )
     .pipe(autoprefixer("last 2 versions"))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write("."))
     .pipe(lineec())
     .pipe(gulp.dest(styleDist));
 }
@@ -106,13 +106,6 @@ function imgmin() {
     )
     .pipe(gulp.dest(imgDist));
 }
-
-//Export function
-exports.html = html;
-exports.style = style;
-exports.javascript = javascript;
-exports.watch = watch;
-exports.imgmin = imgmin;
 
 //Deafault Task
 var build = gulp.parallel(watch);
