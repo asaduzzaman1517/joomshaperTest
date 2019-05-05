@@ -34,6 +34,10 @@ var jsDist = "dist/js/";
 var imgSrc = "src/img/*";
 var imgDist = "dist/img/";
 
+//Font
+var fontSrc = "src/font/*";
+var fontDist = "dist/font/";
+
 //Browser Sync
 function watch() {
   browserSync.init({
@@ -46,6 +50,7 @@ function watch() {
   gulp.watch(styleWatch, style);
   gulp.watch(jsSrc, javascript);
   gulp.watch(imgSrc, imgmin);
+  gulp.watch(fontSrc, font);
   gulp
     .watch([htmlWatch, jsDist + "bundle.js", styleDist + "style.css"])
     .on("change", reload);
@@ -54,6 +59,11 @@ function watch() {
 //Html
 function html() {
   return gulp.src(htmlSrc).pipe(gulp.dest(htmlDist));
+}
+
+//Font
+function font() {
+  return gulp.src(fontSrc).pipe(gulp.dest(fontDist));
 }
 
 //Compile Sass
@@ -82,7 +92,6 @@ function javascript() {
         presets: ["@babel/env"]
       })
     )
-    .pipe(concat("bundle.js"))
     .pipe(uglify())
     .pipe(lineec())
     .pipe(sourcemaps.write("."))

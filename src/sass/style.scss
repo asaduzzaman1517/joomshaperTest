@@ -1,5 +1,34 @@
-$color: #ccc;
+/*---------------------------------------------------
 
-body {
-  background: $color;
-}
+Template Name: Joomshaper Front end Test
+Template URI: https://joomshaper.codderr.com
+Description: Joomshaper Landing page design
+Template Author: Asaduzzaman
+Template Author URI: https://www.codderr.com
+Version: 1.0.0
+
+----------------------------------------------------
+              Table of Contents
+----------------------------------------------------
+1. Plugins
+    1.1 Bootstrap 
+2. Core
+    2.1 Global Style
+3. Module Style
+    3.1 Header
+    3.2 Banner
+    3.3 Countdown
+    3.4 Primary Button
+    3.5 Cloud
+    3.6 Feature
+    3.7 Slider
+----------------------------------------------------*/
+
+// 1. Plugins
+@import "1_plugins/1_plugins";
+
+// 2. Core
+@import "2_core/2_core";
+
+// 3. Module Style
+@import "3_modules/3_modules";

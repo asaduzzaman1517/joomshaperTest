@@ -1,0 +1,27 @@
+/*---------------------------------------
+/*  3.2 Banner Style
+-----------------------------------------*/
+.banner {
+  padding: 8.5rem 0;
+  background: url(../img/hill.png) center 97% no-repeat;
+  background-size: contain;
+  @include md-screen {
+    background-position: center 120%;
+  }
+  @include lg-screen {
+    background-position: center 110%;
+  }
+  @include xl-screen {
+    padding: 10rem 0;
+    background-position: center bottom -200px;
+  }
+  &__title {
+    font-size: 2rem;
+    line-height: 2.375rem;
+
+    @include lg-screen {
+      font-size: 3rem;
+      line-height: 4.375rem;
+    }
+  }
+}

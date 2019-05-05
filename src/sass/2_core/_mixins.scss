@@ -1,0 +1,29 @@
+//Responsive Grid
+
+//Small Screen (min-width: 576px)
+@mixin sm-screen {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+//Medium Screen (min-width: 768px)
+@mixin md-screen {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+//Large Screen (min-width: 992px)
+@mixin lg-screen {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+//Large Screen (min-width: 992px)
+@mixin xl-screen {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}

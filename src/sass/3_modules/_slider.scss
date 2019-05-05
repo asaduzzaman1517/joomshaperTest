@@ -1,0 +1,64 @@
+/*---------------------------------------
+/*  3.7 Slider
+-----------------------------------------*/
+.slider {
+  padding: 8rem 0;
+  background: $light-bg;
+  &__content {
+    margin-bottom: 6rem;
+    &-title {
+      font-size: 2rem;
+      line-height: 2.375rem;
+      margin-bottom: 2rem;
+    }
+    &-text {
+      font-family: $btn-text;
+      color: $text-light;
+    }
+  }
+  &__slide {
+    &-item {
+      position: relative;
+      overflow: hidden;
+      &:hover .slider__slide-item-figc {
+        bottom: 0;
+        opacity: 1;
+      }
+      &:hover .slider__slide-item-img {
+        filter: blur(3px);
+      }
+      &-img {
+        width: 100%;
+        transition: all 500ms ease;
+      }
+      &-figc {
+        background: rgba($light, 0.9);
+        position: absolute;
+        width: 100%;
+        transition: all 500ms ease;
+        opacity: 0;
+        cursor: pointer;
+        @include md-screen {
+          padding: 1rem;
+        }
+      }
+      &-title {
+        font-size: 0.75rem;
+        margin-bottom: 0;
+        @include md-screen {
+          font-size: 1.125rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+      &-text {
+        font-size: 0.625rem;
+        color: $text-lighter;
+        line-height: 0.75rem;
+        @include md-screen {
+          font-size: 0.875rem;
+          line-height: 1.26rem;
+        }
+      }
+    }
+  }
+}

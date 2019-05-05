@@ -1,0 +1,88 @@
+/*---------------------------------------
+/*  3.6 Feature
+-----------------------------------------*/
+.feature {
+  padding: 8rem 0;
+  background: linear-gradient(-180deg, $alpha 0%, $light 100%);
+
+  &-one {
+    margin-bottom: 6rem;
+    @include md-screen {
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url(../img/feature1.jpg) center center;
+        background-size: cover;
+        height: 100%;
+        width: 45%;
+      }
+    }
+
+    &--img {
+      @include md-screen {
+        display: none;
+      }
+      &-content {
+        width: 100%;
+      }
+    }
+    &--text {
+      margin-top: 2rem;
+      @include md-screen {
+        padding: 2rem 0;
+      }
+      h2 {
+        font-size: 2rem;
+        line-height: 2.375rem;
+        margin-bottom: 2rem;
+        @include lg-screen {
+          font-size: 2.5rem;
+          line-height: 3.4375rem;
+        }
+      }
+    }
+  }
+  &-two {
+    @include md-screen {
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(../img/feature2.png) center center;
+        background-size: cover;
+        height: 100%;
+        width: 45%;
+      }
+    }
+    &--img {
+      @include md-screen {
+        display: none;
+      }
+      &-content {
+        width: 100%;
+      }
+    }
+    &--text {
+      margin-top: 2rem;
+      @include md-screen {
+        padding: 2rem 0;
+      }
+      h2 {
+        font-size: 2rem;
+        line-height: 2.375rem;
+        margin-bottom: 2rem;
+        @include lg-screen {
+          font-size: 2.5rem;
+          line-height: 3.4375rem;
+        }
+      }
+    }
+  }
+}

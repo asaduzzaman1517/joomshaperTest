@@ -1,0 +1,66 @@
+/*---------------------------------------
+/*  3.5 Cloud
+-----------------------------------------*/
+.cloud {
+  position: relative;
+  &__img {
+    position: absolute;
+    &--one {
+      top: 8rem;
+      animation: cloudAnimation 36s linear infinite;
+      @include md-screen {
+        top: 6rem;
+      }
+      @include lg-screen {
+        top: 10rem;
+        animation: cloudAnimation 56s linear infinite;
+      }
+    }
+    &--two {
+      bottom: 4rem;
+      animation: cloudAnimation 24s linear infinite;
+      @include lg-screen {
+        animation: cloudAnimation 44s linear infinite;
+      }
+    }
+    &--three {
+      top: 14rem;
+      animation: cloudAnimation 20s linear infinite;
+      @include md-screen {
+        top: 10rem;
+      }
+      @include lg-screen {
+        top: 15rem;
+        animation: cloudAnimation 40s linear infinite;
+      }
+    }
+    &--four {
+      top: 5rem;
+      animation: cloudAnimation 31s linear infinite;
+      @include md-screen {
+        top: 3.5rem;
+      }
+      @include lg-screen {
+        top: 7rem;
+        animation: cloudAnimation 51s linear infinite;
+      }
+    }
+    &--five {
+      bottom: 1rem;
+      animation: cloudAnimation 28s linear infinite;
+      @include lg-screen {
+        animation: cloudAnimation 48s linear infinite;
+      }
+    }
+  }
+}
+
+//Animation
+@keyframes cloudAnimation {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}

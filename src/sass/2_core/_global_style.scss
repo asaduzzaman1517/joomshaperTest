@@ -1,0 +1,41 @@
+/*---------------------------------------
+/*  2.1 Global Style
+-----------------------------------------*/
+
+//Google Font - Roboto Regular & Source Sans Pro
+@import url("https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro:400,700");
+
+//Helvetica
+@font-face {
+  src: url(../font/helvetica.ttf);
+  font-family: helvetica;
+}
+
+body {
+  font-family: $body-text;
+  font-size: 16px;
+  line-height: 1.875rem;
+  color: $text;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: helvetica;
+}
+h1 {
+  font-size: 3rem;
+  line-height: 4.375rem;
+}
+h2 {
+  font-size: 2.5rem;
+  line-height: 3.4375rem;
+}
+h3 {
+  font-size: 1.875rem;
+}
+h4 {
+  font-size: 1.125rem;
+}

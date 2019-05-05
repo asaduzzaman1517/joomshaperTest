@@ -1,0 +1,32 @@
+/*---------------------------------------
+/*  3.3 Countdown
+-----------------------------------------*/
+.countdown {
+  padding: 3.75rem 0;
+  font-size: 2rem;
+  line-height: 2.375rem;
+  @include md-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @include lg-screen {
+    font-size: 3rem;
+    line-height: 4.375rem;
+  }
+  div {
+    padding: 1rem 0;
+    @include md-screen {
+      padding: 0 1rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      line-height: 1.2rem;
+      margin-top: 0.5rem;
+      @include lg-screen {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+      }
+    }
+  }
+}
