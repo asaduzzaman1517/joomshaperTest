@@ -7,8 +7,12 @@
 
 //Helvetica
 @font-face {
-  src: url(../font/helvetica.ttf);
   font-family: helvetica;
+  src: url("../font/helvetica-webfont.eot");
+  src: url("../font/helvetica-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../font/helvetica-webfont.woff") format("woff"),
+    url("../font/helvetica-webfont.ttf") format("truetype"),
+    url("../font/helvetica-webfont.svg#webfont") format("svg");
 }
 
 body {
